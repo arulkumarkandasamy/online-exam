@@ -1,3 +1,6 @@
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule, MatButtonModule} from '@angular/material';
+
 import * as Auth0 from 'auth0-web';
 import {CallbackComponent} from './callback.component';
 
@@ -24,6 +27,9 @@ const appRoutes: Routes = [
     ExamFormComponent,
     ExamsComponent,
     CallbackComponent,
+    NoopAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
   ],
   imports: [
     BrowserModule,
