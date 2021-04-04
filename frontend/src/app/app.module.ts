@@ -1,5 +1,6 @@
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule, MatButtonModule} from '@angular/material';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 import * as Auth0 from 'auth0-web';
 import {CallbackComponent} from './callback.component';
@@ -14,6 +15,8 @@ import {ExamFormComponent} from './exams/exam-form.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ExamsComponent} from './exams/exams.component';
 
+import {MaterialModule} from './material.module';
+
 const appRoutes: Routes = [
   { path: 'callback', component: CallbackComponent },
   { path: 'new-exam', component: ExamFormComponent },
@@ -27,13 +30,11 @@ const appRoutes: Routes = [
     ExamFormComponent,
     ExamsComponent,
     CallbackComponent,
-    NoopAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    MaterialModule,
     RouterModule.forRoot(
       appRoutes,
     ),
